@@ -1,15 +1,17 @@
 package Calculations;
 
+import Main.Settings;
 import Model.Instances.Instance;
 import Model.Instances.TrainingInstancesContainer;
 import Model.Results.SecondLayerResultSet;
+import Model.Results.ThirdLayerResultSet;
 
 public class Errors {
     public static double calculateErrorOffLine(NeuralNetwork network) {
         double error = 0;
         double numberOfTrainingInstances = TrainingInstancesContainer.trainingInstancesList.size();
         for (int i = 0; i < numberOfTrainingInstances; i++) {
-            SecondLayerResultSet response = network.calculateResponse(TrainingInstancesContainer.trainingInstancesList.get(i));
+            ThirdLayerResultSet response = network.calculateResponse(TrainingInstancesContainer.trainingInstancesList.get(i));
             double err = 0;
             err += Math.pow((TrainingInstancesContainer.trainingInstancesList.get(i).getReferencePoint().getX() -
                         response.getResultSet().get(0)), 2);
@@ -18,7 +20,7 @@ public class Errors {
             error+= Math.sqrt(err);
         }
         error = (error / (numberOfTrainingInstances));
-        return error;
+        return error * Settings.dataDivisor;
     }
 
     public static double distance (Instance instance, SecondLayerResultSet resultSet) {

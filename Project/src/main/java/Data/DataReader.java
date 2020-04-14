@@ -54,13 +54,17 @@ public class DataReader {
                     cellCounter++;
 
                     if (cellCounter == 1) {
-                        measurementPoint.setX(currentCell.getNumericCellValue());
+//                        measurementPoint.setX(currentCell.getNumericCellValue());
+                        measurementPoint.setX(currentCell.getNumericCellValue() / Settings.dataDivisor);
                     } else if (cellCounter == 2) {
-                        measurementPoint.setY(currentCell.getNumericCellValue());
+//                        measurementPoint.setY(currentCell.getNumericCellValue());
+                        measurementPoint.setY(currentCell.getNumericCellValue()/ Settings.dataDivisor);
                     } else if (cellCounter == 3) {
-                        referencePoint.setX(currentCell.getNumericCellValue());
+//                        referencePoint.setX(currentCell.getNumericCellValue());
+                        referencePoint.setX(currentCell.getNumericCellValue() / Settings.dataDivisor);
                     } else if (cellCounter == 4) {
-                        referencePoint.setY(currentCell.getNumericCellValue());
+//                        referencePoint.setY(currentCell.getNumericCellValue());
+                        referencePoint.setY(currentCell.getNumericCellValue() / Settings.dataDivisor);
                     }
                 }
 

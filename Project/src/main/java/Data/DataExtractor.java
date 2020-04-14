@@ -17,6 +17,7 @@ public class DataExtractor {
     public boolean extractAllTrainingData(
             LinkedList<MeasurementPoint> readMeasurementPoints,
             LinkedList<ReferencePoint> readReferencePoints) {
+
         TrainingInstancesContainer trainingInstancesContainer = new TrainingInstancesContainer();
         for (int i = Settings.numberOfPointsConsidered - 1; i < readMeasurementPoints.size(); i++) {
             TrainingInstance trainingInstance = new TrainingInstance();

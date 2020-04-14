@@ -1,16 +1,17 @@
 package Model.Neurons;
 
 import Main.Settings;
-import Model.Results.FirstLayerResultSet;
 import Model.Instances.Instance;
+import Model.Results.FirstLayerResultSet;
+import Model.Results.SecondLayerResultSet;
 
 import java.util.LinkedList;
 
-public class FirstLayerNeuron implements Neuron {
+public class ThirdLayerNeuron implements Neuron {
     LinkedList<Double> wages;
     int index;
 
-    public FirstLayerNeuron(int index) {
+    public ThirdLayerNeuron(int index) {
         this.wages = new LinkedList<Double>();
         this.index = index;
         initializeWages();
@@ -18,47 +19,50 @@ public class FirstLayerNeuron implements Neuron {
 
     @Override
     public void initializeWages() {
-        for (int i = 0; i < Settings.numberOfPointsConsidered * 2; i++) {
+        for (int i = 0; i < Settings.numberOfNeuronsInSecondLayer; i++) {
             wages.add(Math.random());
         }
     }
 
     @Override
     public double calculate(Instance instance) {
+        return 0;
+    }
+
+    @Override
+    public double calculate(FirstLayerResultSet resultSet) {
         double result = 0;
-        for (int i = 0, j = 0; i < wages.size(); i++, j++) {
-            result += (wages.get(i) * instance.getMeasurementPoints().get(j).getX());
-            i++;
-            result += (wages.get(i) * instance.getMeasurementPoints().get(j).getY());
+        for (int i = 0; i < wages.size(); i++) {
+            result += (wages.get(i) * resultSet.getResultSet().get(i));
+        }
+        return result;
+    }
+
+    public double calculate(SecondLayerResultSet resultSet) {
+        double result = 0;
+        for (int i = 0; i < wages.size(); i++) {
+            result += (wages.get(i) * resultSet.getResultSet().get(i));
         }
         return result;
     }
 
     @Override
-    public double calculate(FirstLayerResultSet resultSet) {
-        return 0;
-    }
-
-
-    @Override
     public double activate(Instance instance) {
-        double sum = calculate(instance);
-//        double result = (1 / (1 + Math.exp( -1 * sum)));
-        double result = ((Math.exp(sum) - Math.exp(-1 * sum)) / (Math.exp(sum) + Math.exp(-1 * sum)));
-        return result;
-//        return sum;
+        return 0;
     }
 
     @Override
     public double activate(FirstLayerResultSet resultSet) {
-        return 0;
+        return calculate(resultSet);
+    }
+
+    public double activate(SecondLayerResultSet resultSet) {
+        return calculate(resultSet);
     }
 
     @Override
     public double derivative(double value) {
-//        return (value * (1 - value));
-        return ((4 * Math.exp(2 * value)) / Math.pow((Math.exp(2 * value) + 1), 2));
-//        return 1;
+        return 1;
     }
 
     public int getIndex() {

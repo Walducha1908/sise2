@@ -11,8 +11,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -73,11 +73,20 @@
       <workItem from="1585768420142" duration="31000" />
       <workItem from="1586609110229" duration="7309000" />
       <workItem from="1586623866125" duration="18424000" />
-      <workItem from="1586775125238" duration="2975000" />
+      <workItem from="1586775125238" duration="7947000" />
+      <workItem from="1586785777633" duration="1542000" />
+      <workItem from="1586802699663" duration="11263000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="thirdLayerNeurons" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

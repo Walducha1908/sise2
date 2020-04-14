@@ -18,14 +18,20 @@ public class SecondLayerNeuron implements Neuron {
 
     @Override
     public void initializeWages() {
-        for (int i = 0; i< Settings.numberOfNeuronsInFirstLayer; i++) {
+        for (int i = 0; i < Settings.numberOfNeuronsInFirstLayer; i++) {
             wages.add(Math.random());
         }
     }
 
     @Override
     public double calculate(Instance instance) {
-        return 0;
+        double result = 0;
+        for (int i = 0, j = 0; i < wages.size(); i++, j++) {
+            result += (wages.get(i) * instance.getMeasurementPoints().get(j).getX());
+            i++;
+            result += (wages.get(i) * instance.getMeasurementPoints().get(j).getY());
+        }
+        return result;
     }
 
     @Override
@@ -37,19 +43,27 @@ public class SecondLayerNeuron implements Neuron {
         return result;
     }
 
+
     @Override
     public double activate(Instance instance) {
-        return 0;
+        double sum = calculate(instance);
+        return (1 / (1 + Math.exp(-0.00001 * sum)));
     }
 
     @Override
     public double activate(FirstLayerResultSet resultSet) {
-        return calculate(resultSet);
+        double sum = calculate(resultSet);
+//        return (1 / (1 + Math.exp(-1 * sum)));
+        return ((Math.exp(sum) - Math.exp(-1 * sum)) / (Math.exp(sum) + Math.exp(-1 * sum)));
+
+//        return sum;
     }
 
     @Override
     public double derivative(double value) {
-        return 1;
+//        return (value * (1 - value));
+        return ((4 * Math.exp(2 * value)) / Math.pow((Math.exp(2 * value) + 1), 2));
+//        return 1;
     }
 
     public int getIndex() {

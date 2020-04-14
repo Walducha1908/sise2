@@ -4,15 +4,15 @@ import Main.Settings;
 
 import java.util.LinkedList;
 
-public class SecondLayerResultSet implements  ResultSet{
+public class ThirdLayerResultSet implements ResultSet{
     private LinkedList<Double> resultSet;
 
-    public SecondLayerResultSet() {
+    public ThirdLayerResultSet() {
         resultSet = new LinkedList<Double>();
     }
 
     public void addResult(double result) {
-        if (resultSet.size() < Settings.numberOfNeuronsInSecondLayer) {
+        if (resultSet.size() < 2) {
             resultSet.add(result);
         } else {
             System.out.println("Too many results in final results set");
