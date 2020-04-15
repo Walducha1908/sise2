@@ -4,6 +4,7 @@ import Main.Settings;
 import Model.Instances.Instance;
 import Model.Results.FirstLayerResultSet;
 import Model.Results.SecondLayerResultSet;
+import org.apache.poi.ss.formula.functions.T;
 
 import java.util.LinkedList;
 
@@ -17,10 +18,19 @@ public class ThirdLayerNeuron implements Neuron {
         initializeWages();
     }
 
+    public ThirdLayerNeuron(ThirdLayerNeuron neuron) {
+        this.wages = new LinkedList<Double>();
+        this.index = neuron.index;
+
+        for (int i = 0; i < neuron.getWages().size(); i++) {
+            this.wages.add(neuron.getWages().get(i));
+        }
+    }
+
     @Override
     public void initializeWages() {
         for (int i = 0; i < Settings.numberOfNeuronsInSecondLayer; i++) {
-            wages.add(Math.random());
+            wages.add((Math.random() * 2) - 1);
         }
     }
 
@@ -75,5 +85,13 @@ public class ThirdLayerNeuron implements Neuron {
 
     public void setWages(LinkedList<Double> wages) {
         this.wages = wages;
+    }
+
+    @Override
+    public String toString() {
+        return "ThirdLayerNeuron{" +
+                "wages=" + wages +
+                ", index=" + index +
+                '}';
     }
 }

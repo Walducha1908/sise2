@@ -16,10 +16,19 @@ public class FirstLayerNeuron implements Neuron {
         initializeWages();
     }
 
+    public FirstLayerNeuron(FirstLayerNeuron neuron) {
+        this.wages = new LinkedList<Double>();
+        this.index = neuron.index;
+
+        for (int i = 0; i < neuron.getWages().size(); i++) {
+            this.wages.add(neuron.getWages().get(i));
+        }
+    }
+
     @Override
     public void initializeWages() {
         for (int i = 0; i < Settings.numberOfPointsConsidered * 2; i++) {
-            wages.add(Math.random());
+            wages.add((Math.random() * 2) - 1);
         }
     }
 
@@ -57,7 +66,7 @@ public class FirstLayerNeuron implements Neuron {
     @Override
     public double derivative(double value) {
 //        return (value * (1 - value));
-        return ((4 * Math.exp(2 * value)) / Math.pow((Math.exp(2 * value) + 1), 2));
+        return ((4 * Math.exp(2 * value)) / (Math.pow((Math.exp(2 * value) + 1), 2)));
 //        return 1;
     }
 
@@ -71,5 +80,13 @@ public class FirstLayerNeuron implements Neuron {
 
     public void setWages(LinkedList<Double> wages) {
         this.wages = wages;
+    }
+
+    @Override
+    public String toString() {
+        return "FirstLayerNeuron{" +
+                "wages=" + wages +
+                ", index=" + index +
+                '}';
     }
 }

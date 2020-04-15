@@ -16,22 +16,25 @@ public class SecondLayerNeuron implements Neuron {
         initializeWages();
     }
 
+    public SecondLayerNeuron(SecondLayerNeuron neuron) {
+        this.wages = new LinkedList<Double>();
+        this.index = neuron.index;
+
+        for (int i = 0; i < neuron.getWages().size(); i++) {
+            this.wages.add(neuron.getWages().get(i));
+        }
+    }
+
     @Override
     public void initializeWages() {
         for (int i = 0; i < Settings.numberOfNeuronsInFirstLayer; i++) {
-            wages.add(Math.random());
+            wages.add((Math.random() * 2) - 1);
         }
     }
 
     @Override
     public double calculate(Instance instance) {
-        double result = 0;
-        for (int i = 0, j = 0; i < wages.size(); i++, j++) {
-            result += (wages.get(i) * instance.getMeasurementPoints().get(j).getX());
-            i++;
-            result += (wages.get(i) * instance.getMeasurementPoints().get(j).getY());
-        }
-        return result;
+        return 0;
     }
 
     @Override
@@ -46,8 +49,7 @@ public class SecondLayerNeuron implements Neuron {
 
     @Override
     public double activate(Instance instance) {
-        double sum = calculate(instance);
-        return (1 / (1 + Math.exp(-0.00001 * sum)));
+        return 0;
     }
 
     @Override
@@ -62,7 +64,7 @@ public class SecondLayerNeuron implements Neuron {
     @Override
     public double derivative(double value) {
 //        return (value * (1 - value));
-        return ((4 * Math.exp(2 * value)) / Math.pow((Math.exp(2 * value) + 1), 2));
+        return ((4 * Math.exp(2 * value)) / (Math.pow((Math.exp(2 * value) + 1), 2)));
 //        return 1;
     }
 
@@ -76,5 +78,13 @@ public class SecondLayerNeuron implements Neuron {
 
     public void setWages(LinkedList<Double> wages) {
         this.wages = wages;
+    }
+
+    @Override
+    public String toString() {
+        return "SecondLayerNeuron{" +
+                "wages=" + wages +
+                ", index=" + index +
+                '}';
     }
 }

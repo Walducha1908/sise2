@@ -9,7 +9,6 @@ import Model.Neurons.FirstLayerNeuron;
 import Model.Neurons.SecondLayerNeuron;
 import Model.Results.SecondLayerResultSet;
 import Model.Results.ThirdLayerResultSet;
-import sun.awt.image.ImageWatched;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -36,6 +35,36 @@ public class NeuralNetwork {
             thirdLayerNeurons.add(new ThirdLayerNeuron(i));
         }
 
+    }
+
+    public NeuralNetwork(NeuralNetwork neuralNetwork) {
+        firstLayerNeurons = new LinkedList<FirstLayerNeuron>();
+        secondLayerNeurons = new LinkedList<SecondLayerNeuron>();
+        thirdLayerNeurons = new LinkedList<ThirdLayerNeuron>();
+
+        for (int i = 0; i < neuralNetwork.getFirstLayerNeurons().size(); i++) {
+            firstLayerNeurons.add(new FirstLayerNeuron(neuralNetwork.getFirstLayerNeurons().get(i)));
+        }
+
+        for (int i = 0; i < neuralNetwork.getSecondLayerNeurons().size(); i++) {
+            secondLayerNeurons.add(new SecondLayerNeuron(neuralNetwork.getSecondLayerNeurons().get(i)));
+        }
+
+        for (int i = 0; i < neuralNetwork.getThirdLayerNeurons().size(); i++) {
+            thirdLayerNeurons.add(new ThirdLayerNeuron(neuralNetwork.getThirdLayerNeurons().get(i)));
+        }
+    }
+
+    public LinkedList<FirstLayerNeuron> getFirstLayerNeurons() {
+        return firstLayerNeurons;
+    }
+
+    public LinkedList<SecondLayerNeuron> getSecondLayerNeurons() {
+        return secondLayerNeurons;
+    }
+
+    public LinkedList<ThirdLayerNeuron> getThirdLayerNeurons() {
+        return thirdLayerNeurons;
     }
 
     public ThirdLayerResultSet calculateResponse(Instance instance) {
@@ -160,7 +189,7 @@ public class NeuralNetwork {
     }
 
     public double secondLayerWageDeltaForAllInstancesOffLine(SecondLayerNeuron neuron, int wageIndex,
-                                                            LinkedList<ThirdLayerResultSet> responses) {
+                                                             LinkedList<ThirdLayerResultSet> responses) {
         double deltaWage = 0;
         double numberOfTrainingInstances = TrainingInstancesContainer.trainingInstancesList.size();
         for (int i = 0; i < numberOfTrainingInstances; i++) {
@@ -226,8 +255,6 @@ public class NeuralNetwork {
 
 //        System.out.println("All data presented! \n");
 
-
-        System.out.println("Current error: " + Errors.calculateErrorOffLine(this));
         Collections.shuffle(TrainingInstancesContainer.trainingInstancesList);
 
         LinkedList<ThirdLayerResultSet> responses = new LinkedList<ThirdLayerResultSet>();
@@ -279,5 +306,13 @@ public class NeuralNetwork {
 
     }
 
+    @Override
+    public String toString() {
+        return "NeuralNetwork{" +
+                "firstLayerNeurons=" + firstLayerNeurons +
+                ", secondLayerNeurons=" + secondLayerNeurons +
+                ", thirdLayerNeurons=" + thirdLayerNeurons +
+                '}';
+    }
 
 }

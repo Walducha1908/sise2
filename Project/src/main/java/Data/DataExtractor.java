@@ -1,6 +1,8 @@
 package Data;
 
 import Main.Settings;
+import Model.Instances.TestingInstance;
+import Model.Instances.TestingInstancesContainer;
 import Model.Instances.TrainingInstance;
 import Model.Instances.TrainingInstancesContainer;
 import Model.MeasurementPoint;
@@ -35,6 +37,31 @@ public class DataExtractor {
 
             // Store training instance in container
             TrainingInstancesContainer.trainingInstancesList.add(trainingInstance);
+        }
+        return true;
+    }
+
+    public boolean extractAllTestingData(
+            LinkedList<MeasurementPoint> readMeasurementPoints,
+            LinkedList<ReferencePoint> readReferencePoints) {
+
+        TestingInstancesContainer testingInstancesContainer = new TestingInstancesContainer();
+        for (int i = Settings.numberOfPointsConsidered - 1; i < readMeasurementPoints.size(); i++) {
+            TestingInstance testingInstance = new TestingInstance();
+
+            // Firstly, add n measurement points.
+            for (int j = Settings.numberOfPointsConsidered - 1; j >= 0; j--) {
+                if (!testingInstance.addMeasurementPoint(readMeasurementPoints.get(i - j))) {
+                    System.out.println("Too many measurement points! We have reached max measurements points capacity!");
+                    return false;
+                }
+            }
+
+            // Secondly, add reference point.
+            testingInstance.setReferencePoint(readReferencePoints.get(i));
+
+            // Store testing instance in container
+            TestingInstancesContainer.testingInstancesList.add(testingInstance);
         }
         return true;
     }

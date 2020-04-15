@@ -2,6 +2,8 @@ package Calculations;
 
 import Main.Settings;
 import Model.Instances.Instance;
+import Model.Instances.TestingInstance;
+import Model.Instances.TestingInstancesContainer;
 import Model.Instances.TrainingInstancesContainer;
 import Model.Results.SecondLayerResultSet;
 import Model.Results.ThirdLayerResultSet;
@@ -20,6 +22,22 @@ public class Errors {
             error+= Math.sqrt(err);
         }
         error = (error / (numberOfTrainingInstances));
+        return error * Settings.dataDivisor;
+    }
+
+    public static double calculateTestingError(NeuralNetwork network) {
+        double error = 0;
+        double numberOfTestingInstances = TestingInstancesContainer.testingInstancesList.size();
+        for (int i = 0; i < numberOfTestingInstances; i++) {
+            ThirdLayerResultSet response = network.calculateResponse(TestingInstancesContainer.testingInstancesList.get(i));
+            double err = 0;
+            err += Math.pow((TestingInstancesContainer.testingInstancesList.get(i).getReferencePoint().getX() -
+                    response.getResultSet().get(0)), 2);
+            err += Math.pow((TestingInstancesContainer.testingInstancesList.get(i).getReferencePoint().getY() -
+                    response.getResultSet().get(1)), 2);
+            error+= Math.sqrt(err);
+        }
+        error = (error / (numberOfTestingInstances));
         return error * Settings.dataDivisor;
     }
 
