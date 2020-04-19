@@ -212,49 +212,6 @@ public class NeuralNetwork {
 
     public void era() {
 
-//        Collections.shuffle(TrainingInstancesContainer.trainingInstancesList);
-//        for (int m = 0; m < TrainingInstancesContainer.trainingInstancesList.size(); m++) {
-//
-//            SecondLayerResultSet resultSet = (calculateResponse(TrainingInstancesContainer.trainingInstancesList.get(m)));
-//            LinkedList<LinkedList<Double>> firstLayerNeuronWagesDeltas = new LinkedList<LinkedList<Double>>();
-//            LinkedList<LinkedList<Double>> secondLayerNeuronWagesDeltas = new LinkedList<LinkedList<Double>>();
-//
-//            for (int i = 0; i < firstLayerNeurons.size(); i++) {
-//                LinkedList<Double> wagesDeltas = new LinkedList<Double>();
-//                for (int j = 0; j < firstLayerNeurons.get(i).getWages().size(); j++) {
-//                    wagesDeltas.add(firstLayerNeurons.get(i).getWages().get(j) +
-//                            Settings.learningFactor * firstLayerWageDeltaForInstance(firstLayerNeurons.get(i), j,
-//                                    TrainingInstancesContainer.trainingInstancesList.get(m), resultSet));
-//                }
-//                firstLayerNeuronWagesDeltas.add(wagesDeltas);
-//            }
-//
-//            for (int i = 0; i < secondLayerNeurons.size(); i++) {
-//                LinkedList<Double> wagesDeltas = new LinkedList<Double>();
-//                for (int j = 0; j < secondLayerNeurons.get(i).getWages().size(); j++) {
-//                    wagesDeltas.add(secondLayerNeurons.get(i).getWages().get(j) +
-//                            Settings.learningFactor * secondLayerWageDeltaForInstance(secondLayerNeurons.get(i), j,
-//                                    TrainingInstancesContainer.trainingInstancesList.get(m), resultSet));
-//                }
-//                secondLayerNeuronWagesDeltas.add(wagesDeltas);
-//            }
-//
-//            if (m % 1540 == 0) {
-//                System.out.println("Current error: " + Errors.calculateErrorOffLine(this));
-//            }
-//
-//            for (int i = 0; i < firstLayerNeurons.size(); i++) {
-//                firstLayerNeurons.get(i).setWages(firstLayerNeuronWagesDeltas.get(i));
-//            }
-//
-//            for (int i = 0; i < secondLayerNeurons.size(); i++) {
-//                secondLayerNeurons.get(i).setWages(secondLayerNeuronWagesDeltas.get(i));
-//            }
-//
-//        }
-
-//        System.out.println("All data presented! \n");
-
         Collections.shuffle(TrainingInstancesContainer.trainingInstancesList);
 
         LinkedList<ThirdLayerResultSet> responses = new LinkedList<ThirdLayerResultSet>();

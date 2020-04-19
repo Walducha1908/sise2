@@ -10,11 +10,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000; i++) {
             Settings.startFileOffset = (i % 12) + 1;
-            Settings.numberOfNeuronsInFirstLayer = 6 + (i % 3);
-            Settings.numberOfNeuronsInSecondLayer = 6 + (i*2 % 3);
+            Settings.numberOfNeuronsInFirstLayer = 5 + (i % 5);
+            Settings.numberOfNeuronsInSecondLayer = 5 + (i*2 % 5);
             System.out.println("\nStarted reading data...\n");
+            System.out.println("File number " + Settings.startFileOffset);
             Manager.readAndPrepareTrainingData();
             Manager.createNeuralNetworkAndStartLearning();
         }

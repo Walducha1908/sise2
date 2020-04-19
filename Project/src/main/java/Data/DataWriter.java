@@ -37,8 +37,55 @@ public class DataWriter {
         createExcelRow("Points Considered :", Integer.toString(Settings.numberOfPointsConsidered), sheet, ++rowCount);
         createExcelRow("First Layer neurons :", Integer.toString(Settings.numberOfNeuronsInFirstLayer), sheet, ++rowCount);
         createExcelRow("Second Layer neurons :", Integer.toString(Settings.numberOfNeuronsInSecondLayer), sheet, ++rowCount);
-        createExcelRow("Neural Network :", neuralNetwork.toString(), sheet, ++rowCount);
-        createExcelRow("Starting Neural Network :", startingNeuralNetwork.toString(), sheet, ++rowCount);
+
+        rowCount += 1;
+        createExcelRow("Final neural network", "", sheet, ++rowCount);
+
+        createExcelRow("First Layer", "", sheet, ++rowCount);
+        for (int i = 0; i < neuralNetwork.getFirstLayerNeurons().size(); i++) {
+            int columnCount = 0;
+            row = sheet.createRow(++rowCount);
+
+            Cell valueCell = row.createCell(++columnCount);
+            valueCell.setCellValue("Neuron " + i);
+
+            for (int j = 0; j < Settings.numberOfPointsConsidered * 2; j++) {
+                valueCell = row.createCell(++columnCount);
+                valueCell.setCellValue(neuralNetwork.getFirstLayerNeurons().get(i).getWages().get(j));
+            }
+        }
+
+        rowCount += 1;
+        createExcelRow("Second Layer", "", sheet, ++rowCount);
+        for (int i = 0; i < neuralNetwork.getSecondLayerNeurons().size(); i++) {
+            int columnCount = 0;
+            row = sheet.createRow(++rowCount);
+
+            Cell valueCell = row.createCell(++columnCount);
+            valueCell.setCellValue("Neuron " + i);
+
+            for (int j = 0; j < Settings.numberOfNeuronsInFirstLayer; j++) {
+                valueCell = row.createCell(++columnCount);
+                valueCell.setCellValue(neuralNetwork.getSecondLayerNeurons().get(i).getWages().get(j));
+            }
+        }
+
+        rowCount += 1;
+        createExcelRow("Third Layer", "", sheet, ++rowCount);
+        for (int i = 0; i < neuralNetwork.getThirdLayerNeurons().size(); i++) {
+            int columnCount = 0;
+            row = sheet.createRow(++rowCount);
+
+            Cell valueCell = row.createCell(++columnCount);
+            valueCell.setCellValue("Neuron " + i);
+
+            for (int j = 0; j < Settings.numberOfNeuronsInSecondLayer; j++) {
+                valueCell = row.createCell(++columnCount);
+                valueCell.setCellValue(neuralNetwork.getThirdLayerNeurons().get(i).getWages().get(j));
+            }
+        }
+//        createExcelRow("Neural Network :", neuralNetwork.toString(), sheet, ++rowCount);
+//        createExcelRow("Starting Neural Network :", startingNeuralNetwork.toString(), sheet, ++rowCount);
 
         sheet.autoSizeColumn(1);
         sheet.autoSizeColumn(2);

@@ -64,7 +64,8 @@ public class SecondLayerNeuron implements Neuron {
     @Override
     public double derivative(double value) {
 //        return (value * (1 - value));
-        return ((4 * Math.exp(2 * value)) / (Math.pow((Math.exp(2 * value) + 1), 2)));
+//        return ((4 * Math.exp(2 * value)) / (Math.pow((Math.exp(2 * value) + 1), 2)));
+        return (1 - Math.pow(value, 2));
 //        return 1;
     }
 
