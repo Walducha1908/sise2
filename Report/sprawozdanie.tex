@@ -1,0 +1,133 @@
+\documentclass{classrep}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+
+
+\studycycle{Informatyka, studia dzienne, I st.}
+\coursesemester{VI}
+
+\coursename{Sztuczna Inteligencja i Systemy Ekspertowe}
+\courseyear{2019/2020}
+
+\courseteacher{dr inż. Krzysztof Lichy}
+\coursegroup{wt., 12:15}
+
+\author{
+\studentinfo{Mateusz Walczak}{216911} \and
+\studentinfo{Konrad Kajszczak}{216790}
+}
+
+\title{Zadanie 2: Sieć neuronowa służąca do korygowania pomiaru systemu lokalizacji}
+
+\begin{document}
+\maketitle
+
+\section*{Wprowadzenie}
+Celem zadania było zaprojektowanie i zaimplementowanie sieci neuronowej, która pozwoli na korygowanie błędów uzyskanych z systemu pomiarowego. Projektując sieć neuronową należało odpowiednio dobrać \cite{zadanie}:
+
+\begin{itemize}[label=$\bullet$\scshape\bfseries]
+\item liczbę warstw,
+\item liczebność neuronów w poszczególnych warstwach,
+\item funkcje aktywacji,
+\item liczbę próbek z poprzednich chwil czasowych.
+\end{itemize}
+
+\section{Opis architektury sieci neuronowej}
+
+W tym rozdziale rozpoczniemy od opisu działania naszego programu oraz drogi jaką przebyliśmy, aby znaleźć taką sieć neuronową, która pozwoli na skuteczne korygowanie błędów uzyskanych z systemu pomiarowego. Nastepnie skoncetrujemy się na opisie architektury tej sieci neuronowej, która okazała się najskutecznniejsza. 
+
+\subsection{Historia wyboru odpowiedniej architektury sieci neuronowej}
+
+Nasz program został napisany w języku $Java$, bez wykorzystania wysokopoziomowych bibliotek do tworzenia sieci neuronowych.
+Program został napisany w taki sposób, aby w zależności od ustawień, tworzyć, inicjować a następnie przeprowadzać proces nauki dla sieci neuronowych o różnych liczbach nauronów w poszczególnych warstwach a także różnych liczbach próbek z poprzednich chwil czasowych.\newline 
+
+Po wielu nieudanych próbach poprawy błędów uzyskanych z systemu pomiarowego, z wykorzystaniem sieci 2-warstwowych ($n$ neuronów w 1 warstwie i 2 neurony w warstwie wyjściowej), zdecydowano się na implementcję 3-warstowej sieci nueronowej.\newline
+
+Nasza aplikacja buduje 3-warstową sieć neuronową na podstawie trzech parametrów, które na potrzeby tego sprawozdania będziemy nazywać $n_1$, $n_2$ oraz $p$. Kolejno, stanowią one:
+
+\begin{itemize}[label=$\bullet$\scshape\bfseries]
+\item $n_1$ - liczba neuronów w pierwszej warstwie sieci,
+\item $n_2$ - liczba neuronów w drugiej warstwie sieci,
+\item $p$ - liczbę próbek z poprzednich chwil czasowych wykorzystywanych przez sieć neuronową.
+\end{itemize}
+
+W tym miejscu warto wspomnieć o tym, że trzecia warstwa za każdym razem składała się z 2 neuronów, ponieważ nasza sieć musi mieć 2 wyjścia, aby spełniała warunki zadania (powinna zwracać współrzędną x-ową i y-ową dla danej próbki pomiarowej).\newline
+
+Warstwa trzecia (wyjściowa) posiadała identycznościową funkcję aktywacji. Warstwy pierwsza i druga zaś funkcję hiperboliczną (tangens hiperboliczny), określoną wzorem:
+
+\begin{equation}
+\operatorname{tgh} x = \frac{\sinh x}{\cosh x} = \frac{e^x - e^{-x}}{e^x + e^{-x}}.
+\end{equation}\newline
+
+Wszystkie wagi, dla każdego z neuronów we wszystkich 3 warstwach, inicjalizowano wartością losową, należącą do przedziału $\langle-1; 1\rangle$.\newline
+
+Program uruchamiano dla różnych kombinacji parametrów $n_1$, $n_2$ oraz $p$. W każdej z kombinacji powtarzano eksperymenty kilkukrotnie, w poszukiwaniu najbardziej optymalnego rozwiązania. Wartości osiągane przez poszczególne parametry każdorazowo należały do zbiorów liczb całkowitych spełniających warunki, odpowiednio:
+
+\begin{equation}
+ 2 \leq n_1 \leq 20,
+\end{equation}
+
+\begin{equation}
+ 2 \leq n_2 \leq 20,
+\end{equation}
+
+\begin{equation}
+ 1 \leq p \leq 10.
+\end{equation}
+
+Na podstawie tysięcy iteracji programu, przeprowadzonych na przestrzeni klikudziesięciu godzin, wyciągnięto wnioski dotyczące tego, jakie wartości parametrów $n_1$, $n_2$ oraz $p$ są optymalne dla zadanego problemu. Okazało się, że:
+\begin{itemize}[label=$\bullet$\scshape\bfseries]
+
+\item najbardziej optymalne liczby neuronów zarówno w warstwie pierwszej jak i drugiej to te, należące do przedziału 
+\begin{equation}
+n_1, n_2 \in \langle6; 9\rangle.
+\end{equation}
+
+\item liczby próbek z poprzednich chwil czasowych, dających najlepsze rezultaty są następujące:
+\begin{equation}
+p=3  \lor p=4 \lor p=5
+\end{equation}
+\end{itemize}
+
+W ten sposób bardzo zawęzliliśmy różnorodność sieci neuronowych, wykorzystywanych do naszych eksperymentów. W następnym etapie badań, wykorzystywano już tylko takie sieci neuronowe, które stosowały się do powyższych wniosków. Program ponownie uruchomiono wiele razy. Tym razem jednak, regularnie udawało się osiągnąć zamierzony cel - nauczona sieć neuronowa znacząco korygowała błędy uzyskane z systemu pomiarowego.\newline
+
+Architektura sieci neuronowej, z wykorzystaniem której uzyskano najlepsze rezultaty została omówiona w następnym podrozdziale.
+
+\subsection{Najskuteczniejsza sieć neuronowa - szczegóły architektury}
+
+W wielu iteracjach, z wykorzystaniem różnych konfiguracji sieci (spełniajacych warunki (5) oraz (6)), udawało się nam korygować błędy uzyskane z systemu pomiarowego, a co za tym idzie poprawić dystrybuantę błędu pomiarowego, a także zmniejszyć średni błąd pomiaru dla zbioru testowego.\newline
+
+Najepsze wyniki zarówno dystrybuanty jak i średniego błędu pomiarowego uzyskano dla 3-warstowej sieci neuronowej, której parametry prezentują się następująco:
+
+\begin{itemize}[label=$\bullet$\scshape\bfseries]
+\item liczebność neuronów w poszczególnych warstwach: $n_1 = 6$ i $n_2 = 7$,
+\item liczba próbek z poprzednich chwil czasowych $p = 3$
+\item funkcje aktywacji: 1 i 2 warstwa - funkcja hiperboliczna, 3 warstwa - funkcja identycznościowa.
+\end{itemize}
+
+Omawiana sieć neuronowa posiada 8 wejść do każdego neuronu - przyjmuje 4 próbki - aktualną oraz 3 poprzednie (każda próbka składa się z dwóch wartości - x-owej i y-owej). Sieć nie posiada biasu, a co za tym idzie w pierwszej warstwie każdy neuron ma  dokładnie 8 wag. Na podstawie powższych rozważań należy zauważyć, że funkcja realizowana przez omawianą sieć jest funkcją 8 zmiennych, zwracającą w wyniku 2 wartości.\newline.
+
+Zestaw wag nauczonej sieci neuronowej zestawiono w poniższych tabelach. 
+
+
+
+\section{Opis algorytmu uczenia sieci neuronowej}
+
+\section{Porównanie dystrybuant błędu pomiaru}
+
+\section{Kod źródłowy programu}
+
+
+
+\begin{thebibliography}{1}
+\bibitem{zadanie} 
+Treść zadania drugiego\newline
+\textit{https://ftims.edu.p.lodz.pl/mod/page/view.php?id=73137}. 
+
+\end{thebibliography}
+
+\end{document}
