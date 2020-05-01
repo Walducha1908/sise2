@@ -60,15 +60,19 @@ public class Manager {
 
         for (int i=0; i<Settings.maxEras; i++) {
             double currentError = Errors.calculateErrorOffLine(neuralNetwork);
-            System.out.println("Current error: " + currentError + " Testing Error: " + Errors.calculateTestingError(neuralNetwork));
+            double testingError = Errors.calculateTestingError(neuralNetwork);
+            double drop = lastError - currentError;
+            System.out.println("Current error: " + currentError + " Testing Error: " + testingError + " Drop: " + drop);
 
-            if (((lastError - currentError) < Settings.stopDifference) || (currentError > 20000)) {
+            if ((Math.abs(drop) < Settings.stopDifference) || (currentError > 20000)) {
                 System.out.println("Testing Error: " + Errors.calculateTestingError(neuralNetwork));
-                DataWriter.saveResults(neuralNetwork, startingNeuralNetwork, i);
+                if (testingError < 300) {
+                    DataWriter.saveResults(neuralNetwork, startingNeuralNetwork, i);
+                }
                 break;
             }
 
-            if (i > 500 && currentError > 1000) {
+            if (i > 200 && currentError > 1000) {
                 break;
             }
 

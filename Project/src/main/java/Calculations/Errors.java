@@ -41,6 +41,22 @@ public class Errors {
         return error * Settings.dataDivisor;
     }
 
+    public static double calculateErrorForInstance(NeuralNetwork network, Instance instance) {
+        double error = 0;
+        double err = 0;
+
+        ThirdLayerResultSet response = network.calculateResponse(instance);
+
+        err += Math.pow((instance.getReferencePoint().getX() -
+                response.getResultSet().get(0)), 2);
+        err += Math.pow((instance.getReferencePoint().getY() -
+                response.getResultSet().get(1)), 2);
+
+        error+= Math.sqrt(err);
+
+        return error * Settings.dataDivisor;
+    }
+
     public static double distance (Instance instance, SecondLayerResultSet resultSet) {
         double result = 0;
         result += Math.pow(instance.getReferencePoint().getX() - resultSet.getResultSet().get(0), 2);

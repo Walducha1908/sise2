@@ -15,7 +15,7 @@ public class DataExtractor {
     /*
         I decided to ignore first n training points where n is number of points considered.
         That's why we have "int i = Settings.numberOfPointsConsidered - 1" in the loop.
-         */
+    */
     public boolean extractAllTrainingData(
             LinkedList<MeasurementPoint> readMeasurementPoints,
             LinkedList<ReferencePoint> readReferencePoints) {
@@ -35,7 +35,7 @@ public class DataExtractor {
             // Secondly, add reference point.
             trainingInstance.setReferencePoint(readReferencePoints.get(i));
 
-            // Store training instance in container
+            // Store training instance in container.
             TrainingInstancesContainer.trainingInstancesList.add(trainingInstance);
         }
         return true;

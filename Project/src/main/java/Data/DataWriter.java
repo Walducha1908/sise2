@@ -3,6 +3,7 @@ package Data;
 import Calculations.Errors;
 import Calculations.NeuralNetwork;
 import Main.Settings;
+import Model.Instances.TestingInstancesContainer;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -84,8 +85,11 @@ public class DataWriter {
                 valueCell.setCellValue(neuralNetwork.getThirdLayerNeurons().get(i).getWages().get(j));
             }
         }
-//        createExcelRow("Neural Network :", neuralNetwork.toString(), sheet, ++rowCount);
-//        createExcelRow("Starting Neural Network :", startingNeuralNetwork.toString(), sheet, ++rowCount);
+
+        rowCount += 1;
+        for (int i = 0; i < TestingInstancesContainer.testingInstancesList.size(); i++) {
+            createExcelRow("Test instance " + i, Double.toString(Errors.calculateErrorForInstance(neuralNetwork, TestingInstancesContainer.testingInstancesList.get(i))), sheet, ++rowCount);
+        }
 
         sheet.autoSizeColumn(1);
         sheet.autoSizeColumn(2);
@@ -93,8 +97,8 @@ public class DataWriter {
         try (
                 FileOutputStream outputStream = new FileOutputStream(
                         Settings.pathToReports +
-                                "SISE2_Report_" +
-                                dtf.format(now) +
+                                "SISE2_Report_Error_" +
+                                Math.round(Errors.calculateTestingError(neuralNetwork)) +
                                 ".xlsx")) {
             workbook.write(outputStream);
         } catch (

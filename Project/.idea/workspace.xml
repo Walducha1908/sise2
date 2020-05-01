@@ -7,22 +7,220 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="620eb12b-9896-4a0a-ab8c-77f64936e4a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Project_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BestNetworks/LessThan200.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../BestNetworks/LessThan200.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BestResults/SISE2_Report_2020_04_15_06_04_27.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BestResults/SISE2_Report_2020_04_15_08_56_30.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Calculations/NeuralNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Calculations/NeuralNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Calculations/Errors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Calculations/Errors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/DataExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/DataExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/DataNormaliser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/DataCleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/DataReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Data/DataWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/DataWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/NetworkCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/NetworkCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Neurons/FirstLayerNeuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Neurons/FirstLayerNeuron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Neurons/SecondLayerNeuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Neurons/SecondLayerNeuron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Calculations/NeuralNetwork.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Calculations/NeuralNetwork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Calculations/Errors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Calculations/Errors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/DataNormaliser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/DataReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/DataReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Data/DataWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/DataWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data/NetworkCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data/NetworkCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main/Manager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main/Settings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Model/Neurons/FirstLayerNeuron.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/Neurons/FirstLayerNeuron.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Model/Neurons/SecondLayerNeuron.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/Neurons/SecondLayerNeuron.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_14_15_54_19.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_14_16_56_30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_14_23_46_24.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_14_23_48_45.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_14_23_52_41.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_14_23_59_56.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_18_18.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_18_19.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_20_42.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_20_47.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_20_48.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_26_45.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_26_47.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_26_49.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_26_51.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_26_53.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_27_14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_27_24.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_27_29.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_00_27_31.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_41_19.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_41_21.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_41_24.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_43_54.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_43_55.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_43_56.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_46_55.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_59_53.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_59_54.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_01_59_55.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_39_31.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_39_36.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_39_40.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_39_43.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_39_45.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_39_50.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_39_51.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_42_06.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_42_07.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_43_40.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_45_39.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_45_40.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_45_42.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_45_52.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_45_53.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_45_54.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_45_56.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_45_57.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_46_16.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_03_49_15.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_04_18_06.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_04_23_12.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_04_27.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_04_28.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_04_29.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_04_39.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_04_40.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_04_45.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_04_47.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_08_43.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_08_47.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_13_06.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_13_07.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_13_10.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_13_12.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_15_30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_16_34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_18_38.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_18_54.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_45_21.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_50_13.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_50_14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_50_16.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_06_50_48.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_07_04_03.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_07_11_41.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_07_11_43.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_08_33_26.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_08_56_30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_08_56_35.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_08_56_36.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_01_20.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_01_21.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_02_01.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_02_03.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_02_25.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_02_28.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_03_30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_03_37.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_03_38.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_03_49.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_10_29.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_45_33.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_45_34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_47_01.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_47_03.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_47_04.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_47_53.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_47_54.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_47_56.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_09_51_48.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_10_14_54.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_10_15_29.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_10_15_50.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_10_15_51.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_10_15_54.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_10_17_06.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_10_17_07.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_13_56_09.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_13_56_10.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_14_39_24.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_14_39_26.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_14_39_28.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_14_40_46.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_14_40_48.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_15_14_41_19.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_44_05.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_46_28.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_52_30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_52_58.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_53_33.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_54_06.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_54_46.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_55_20.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_55_22.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_55_23.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_55_25.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_56_08.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_56_14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_56_16.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_58_55.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_04.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_10.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_16.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_18.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_20.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_25.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_42.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_50.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_18_59_56.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_00_04.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_04_16.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_05_04.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_05_15.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_05_21.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_14_22.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_14_36.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_14_38.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_23_15.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_28_27.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_28_28.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_28_30.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_28_31.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_28_33.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_28_34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_28_58.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_29_04.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_29_06.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_29_07.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_31_51.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_32_10.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_32_52.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_32_53.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_46_34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_46_44.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_46_48.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_47_22.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_19_55_34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_00_31.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_00_32.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_00_33.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_00_34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_00_35.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_01_06.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_01_07.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_01_08.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_01_09.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_01_10.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_03_07.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_03_50.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_16_32.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_17_12.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_17_13.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_18_09.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_18_10.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_22_33.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_22_52.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_22_57.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_22_59.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_23_36.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_23_37.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reports/SISE2_Report_2020_04_19_20_23_55.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +300,9 @@
       <workItem from="1586785777633" duration="1542000" />
       <workItem from="1586802699663" duration="11263000" />
       <workItem from="1586864076338" duration="21091000" />
-      <workItem from="1587313507651" duration="7721000" />
+      <workItem from="1587313507651" duration="20111000" />
+      <workItem from="1587398629869" duration="22620000" />
+      <workItem from="1587495092570" duration="3309000" />
     </task>
     <servers />
   </component>
@@ -126,55 +326,63 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1586864092314" />
-    <state width="419" height="466" key="DebuggerActiveHint" timestamp="1587317192632">
+    <state width="495" height="466" key="DebuggerActiveHint" timestamp="1587402846843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="419" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1587317192632" />
+    <state width="495" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1587402846843" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1587320845122">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="2606" y="211" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586945982512" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587320845122" />
-    <state width="1493" height="155" key="GridCell.Tab.0.bottom" timestamp="1587320336555">
+    <state width="1493" height="260" key="GridCell.Tab.0.bottom" timestamp="1587540241311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586958821175" />
-    <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587320336555" />
-    <state width="1493" height="155" key="GridCell.Tab.0.center" timestamp="1587320336555">
+    <state width="1493" height="155" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1587382781434" />
+    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587480787466" />
+    <state width="1493" height="260" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587540241311" />
+    <state width="1493" height="260" key="GridCell.Tab.0.center" timestamp="1587540241311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586958821175" />
-    <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587320336555" />
-    <state width="1493" height="155" key="GridCell.Tab.0.left" timestamp="1587320336555">
+    <state width="1493" height="155" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1587382781434" />
+    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587480787466" />
+    <state width="1493" height="260" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587540241311" />
+    <state width="1493" height="260" key="GridCell.Tab.0.left" timestamp="1587540241311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586958821175" />
-    <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587320336555" />
-    <state width="1493" height="155" key="GridCell.Tab.0.right" timestamp="1587320336555">
+    <state width="1493" height="155" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1587382781434" />
+    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587480787465" />
+    <state width="1493" height="260" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587540241311" />
+    <state width="1493" height="260" key="GridCell.Tab.0.right" timestamp="1587540241311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586958821175" />
-    <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587320336555" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1587319173381">
+    <state width="1493" height="155" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1587382781434" />
+    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587480787466" />
+    <state width="1493" height="260" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587540241311" />
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1587540241312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586958821175" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587319173381" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1587319173381">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1587382580704" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587480787466" />
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587540241312" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1587540241311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586958821175" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587319173381" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1587319173381">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1587382580704" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587480787466" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587540241311" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1587540241311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586958821175" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587319173381" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1587319173381">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1587382580704" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587480787466" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587540241311" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1587540241312">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586958821175" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587319173381" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1587382580704" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587480787466" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587540241312" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1587320850853">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

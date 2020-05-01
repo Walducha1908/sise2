@@ -57,6 +57,7 @@ public class NetworkCreator {
             }
 
             iterator.next();
+            iterator.next();
 
             for (int i = 0; i < neuralNetwork.getSecondLayerNeurons().size(); i++) {
                 Row currentRow = iterator.next();
@@ -70,6 +71,7 @@ public class NetworkCreator {
                 neuralNetwork.getSecondLayerNeurons().get(i).setWages(wages);
             }
 
+            iterator.next();
             iterator.next();
 
             for (int i = 0; i < neuralNetwork.getThirdLayerNeurons().size(); i++) {
