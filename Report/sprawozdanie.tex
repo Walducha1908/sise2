@@ -111,13 +111,77 @@ Najepsze wyniki zarówno dystrybuanty jak i średniego błędu pomiarowego uzysk
 
 Omawiana sieć neuronowa posiada 8 wejść do każdego neuronu - przyjmuje 4 próbki - aktualną oraz 3 poprzednie (każda próbka składa się z dwóch wartości - x-owej i y-owej). Sieć nie posiada biasu, a co za tym idzie w pierwszej warstwie każdy neuron ma  dokładnie 8 wag. Na podstawie powższych rozważań należy zauważyć, że funkcja realizowana przez omawianą sieć jest funkcją 8 zmiennych, zwracającą w wyniku 2 wartości.\newline.
 
-Zestaw wag nauczonej sieci neuronowej zestawiono w poniższych tabelach. 
+Zestaw wag nauczonej sieci neuronowej zestawiono w trzech poniższych tabelach (Skrót "Nn" oznacza neuron). 
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c c c c c c c} 
+		\hline
+		\textbf{Waga} & \textbf{Nn 1} & \textbf{Nn 2} & \textbf{Nn 3} & \textbf{Nn 4} & \textbf{Nn 5} & \textbf{Nn 6}\\ [0.5ex] 
+		\hline
+		\hline 
+1	&	-0,8345	&	0,5208	&	0,5247	&	0,6965	&	-0,9008	&	0,8152	\\
+2	&	0,2971	&	-0,2796	&	0,0606	&	0,8703	&	-0,1564	&	0,7358	\\
+3	&	0,2577	&	0,4535	&	0,2143	&	-0,5176	&	0,2342	&	0,2574	\\
+4	&	-1,5628	&	0,5740	&	-1,2067	&	0,4588	&	-0,6185	&	-1,2189	\\
+5	&	0,3751	&	0,2277	&	-0,7225	&	0,6301	&	-0,6720	&	0,5789	\\
+6	&	0,8277	&	-0,3251	&	1,0052	&	-0,2776	&	-0,3657	&	0,4929	\\
+7	&	-1,1181	&	0,1962	&	0,9500	&	-0,1792	&	-1,1461	&	-0,5759	\\
+8	&	0,7334	&	-0,6795	&	-0,2298	&	-0,3676	&	0,8913	&	-0,8044	\\
+		\hline
+	\end{tabular}
+	\caption{Wagi dla neuronów warstwy 1}
+\end{table}
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c c c c c c c c} 
+		\hline
+		\textbf{Waga} & \textbf{Nn 1} & \textbf{Nn 2} & \textbf{Nn 3} & \textbf{Nn 4} & \textbf{Nn 5} & \textbf{Nn 6} & \textbf{Nn 7}\\ [0.5ex] 
+		\hline
+		\hline 
+1	&	-0,6660	&	0,7435	&	-0,3241	&	0,4283	&	0,9674	&	-0,3338	&	-0,7312	\\
+2	&	-0,4454	&	-1,1011	&	0,4355	&	0,7745	&	0,9237	&	0,1524	&	0,1921	\\
+3	&	0,4469	&	-0,0431	&	0,1553	&	0,6801	&	0,5595	&	0,2300	&	0,0051	\\
+4	&	0,2453	&	-0,2336	&	-0,8740	&	0,7704	&	0,9656	&	0,1251	&	-0,1752	\\
+5	&	0,9365	&	-0,2782	&	-0,7875	&	-0,0719	&	0,4287	&	0,9144	&	-0,1206	\\
+6	&	1,0438	&	0,9676	&	0,4185	&	-0,4862	&	-0,5366	&	0,8669	&	-0,0850	\\
+		\hline
+	\end{tabular}
+	\caption{Wagi dla neuronów warstwy 2}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c c c} 
+		\hline
+		\textbf{Waga} & \textbf{Nn 1} & \textbf{Nn 2}\\ [0.5ex] 
+		\hline
+		\hline 
+1	&	-0,2437	&	0,0113	\\
+2	&	-0,5656	&	-0,1620	\\
+3	&	-0,1151	&	-0,0018	\\
+4	&	1,2181	&	0,3675	\\
+5	&	0,1185	&	0,7748	\\
+6	&	0,7158	&	-0,5857	\\
+7	&	-0,6539	&	-0,2363	\\
+		\hline
+	\end{tabular}
+	\caption{Wagi dla neuronów warstwy 3}
+\end{table}
 
 \section{Opis algorytmu uczenia sieci neuronowej}
 
 \section{Porównanie dystrybuant błędu pomiaru}
+
+Na poniższym wykresie porównano dystrybuantę błędu pomiaru dla danych ze zbioru testowego oraz dla danych uzyskanych w wyniku filtracji przy użyciu sieci neuronowej.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{{Wykresy/dystrybuanta.png}}
+	\caption{Porównanie dystrybuant błędu pomiaru}
+\end{figure}
+
 
 \section{Kod źródłowy programu}
 
