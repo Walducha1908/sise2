@@ -172,6 +172,24 @@ Zestaw wag nauczonej sieci neuronowej zestawiono w trzech poniższych tabelach (
 
 \section{Opis algorytmu uczenia sieci neuronowej}
 
+Metodą wykorzystywaną do nauki sieci neuronowej w naszym programie jest algorytm wstecznej propagacji błędów. Ogólny wzór na zmianę wag ($\Delta w$), czyli wartość o jaką modyfikowane będą wagi po całej epoce nauki (prezentacji wszystkich danych treningowych - nauczamy w trybie \textit{off-line}) prezentuje się następująco:
+\begin{equation}
+	\Delta w = q \cdot d \cdot z,
+\end{equation}
+gdzie $q$ to współczynnik nauki, $z$ - sygnał wchodzący do neuronu danym wejściem a $d$ - pomocniczy współczynnik błędu.\newline
+
+Aby obliczyć pomocniczy współczynnik błędu $d$ dla ostatniej warstwy (wyjściowej) należy skorzystać z poniższego wzoru:
+\begin{equation}
+	d = f'(s) \cdot (t - e),
+\end{equation}
+gdzie $f'(s)$ stanowi pochodną funkcji aktywacji od wartości wzbudzenia $s$, $t$ to poprawna odpowiedź dla danego neuronu - ponieważ mamy dwa neurony w warstwie wyjściowej będzie to odpowiednio wartość x-owa lub y-owa punktu treningowego, $e$ - obliczona odpowiedź dla tego neuronu.\newline
+
+W celu obliczenia współczynnika $d$ dla pozostałych warstw należy wykorzystać obliczony współczynnik dla warstwy wyjściowej, propagując w ten sposób błąd wgłąb sieci neuronowej, aż do warstwy pierwszej:
+\begin{equation}
+	d = f'(s) \cdot \sum_{i=1}^{n} w_i d_i.
+\end{equation}
+Na podstawie wzoru (9) łatwo zauważyć, że neuron w warstwie ukrytej dodaje do siebie błędy $d_i$ z neuronów, z którymi jest połączony. Waga $w_i$ to waga wejścia neuronu, do której "podłączony" jest neuron dla którego aktualnie liczymy współczynnik $d$.
+
 \section{Porównanie dystrybuant błędu pomiaru}
 
 Na poniższym wykresie porównano dystrybuantę błędu pomiaru dla danych ze zbioru testowego oraz dla danych uzyskanych w wyniku filtracji przy użyciu sieci neuronowej.
