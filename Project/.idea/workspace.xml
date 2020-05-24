@@ -43,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../KSR2/ksr2" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -89,6 +89,7 @@
       <workItem from="1587398629869" duration="22620000" />
       <workItem from="1587495092570" duration="3309000" />
       <workItem from="1588337335469" duration="1848000" />
+      <workItem from="1588598897013" duration="37000" />
     </task>
     <servers />
   </component>
@@ -116,11 +117,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="495" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1587402846843" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1587320845122">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588598932853">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="2606" y="211" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1586945982512" />
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587320845122" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588598932853" />
     <state width="1493" height="260" key="GridCell.Tab.0.bottom" timestamp="1587540241311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

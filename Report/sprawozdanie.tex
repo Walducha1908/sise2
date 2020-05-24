@@ -43,7 +43,7 @@ W tym rozdziale rozpoczniemy od opisu działania naszego programu oraz drogi jak
 \subsection{Historia wyboru odpowiedniej architektury sieci neuronowej}
 
 Nasz program został napisany w języku $Java$, bez wykorzystania wysokopoziomowych bibliotek do tworzenia sieci neuronowych.
-Program został napisany w taki sposób, aby w zależności od ustawień, tworzyć, inicjować a następnie przeprowadzać proces nauki dla sieci neuronowych o różnych liczbach nauronów w poszczególnych warstwach a także różnych liczbach próbek z poprzednich chwil czasowych.\newline 
+Program został napisany w taki sposób, aby w zależności od ustawień, tworzyć, inicjować a następnie przeprowadzać proces nauki dla sieci neuronowych o różnych liczbach neuronów w poszczególnych warstwach a także różnych liczbach próbek z poprzednich chwil czasowych.\newline 
 
 Po wielu nieudanych próbach poprawy błędów uzyskanych z systemu pomiarowego, z wykorzystaniem sieci 2-warstwowych ($n$ neuronów w 1 warstwie i 2 neurony w warstwie wyjściowej), zdecydowano się na implementcję 3-warstowej sieci nueronowej.\newline
 
@@ -109,7 +109,7 @@ Najepsze wyniki zarówno dystrybuanty jak i średniego błędu pomiarowego uzysk
 \item funkcje aktywacji: 1 i 2 warstwa - funkcja hiperboliczna, 3 warstwa - funkcja identycznościowa.
 \end{itemize}
 
-Omawiana sieć neuronowa posiada 8 wejść do każdego neuronu - przyjmuje 4 próbki - aktualną oraz 3 poprzednie (każda próbka składa się z dwóch wartości - x-owej i y-owej). Sieć nie posiada biasu, a co za tym idzie w pierwszej warstwie każdy neuron ma  dokładnie 8 wag. Na podstawie powższych rozważań należy zauważyć, że funkcja realizowana przez omawianą sieć jest funkcją 8 zmiennych, zwracającą w wyniku 2 wartości.\newline.
+Omawiana sieć neuronowa posiada 8 wejść do każdego neuronu - przyjmuje 4 próbki - aktualną oraz 3 poprzednie (każda próbka składa się z dwóch wartości - x-owej i y-owej). Sieć nie posiada biasu, a co za tym idzie w pierwszej warstwie każdy neuron ma  dokładnie 8 wag. Na podstawie powyższych rozważań należy zauważyć, że funkcja realizowana przez omawianą sieć jest funkcją 8 zmiennych, zwracającą w wyniku 2 wartości.\newline.
 
 Zestaw wag nauczonej sieci neuronowej zestawiono w trzech poniższych tabelach (Skrót "Nn" oznacza neuron). 
 
@@ -188,7 +188,7 @@ W celu obliczenia współczynnika $d$ dla pozostałych warstw należy wykorzysta
 \begin{equation}
 	d = f'(s) \cdot \sum_{i=1}^{n} w_i d_i.
 \end{equation}
-Na podstawie wzoru (9) łatwo zauważyć, że neuron w warstwie ukrytej dodaje do siebie błędy $d_i$ z neuronów, z którymi jest połączony. Waga $w_i$ to waga wejścia neuronu, do której "podłączony" jest neuron dla którego aktualnie liczymy współczynnik $d$.
+Na podstawie wzoru (9) łatwo zauważyć, że neuron w warstwie ukrytej dodaje do siebie błędy $d_i$ z neuronów, z którymi jest połączony. Waga $w_i$ to waga wejścia neuronu, do której "podłączony" jest neuron, dla którego aktualnie liczymy współczynnik $d$.
 
 \section{Porównanie dystrybuant błędu pomiaru}
 
